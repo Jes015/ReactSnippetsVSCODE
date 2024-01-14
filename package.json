@@ -1,0 +1,29 @@
+{
+  "name": "react-badbo-snippets",
+  "displayName": "React Badbo Snippets",
+  "description": "React Snippets <3",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "author": {
+    "name": "Jes015",
+    "url": "https://portfolio-three-chi-27.vercel.app/"
+  },
+  "icon": "./images/icon.jpg",
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+    "new Components": {
+        "prefix": "nc",
+        "body": [
+            "export const ${TM_FILENAME_BASE}: $1 = (props) => {",
+            "   return (",
+            "       <div>$2</div>",
+            "   )"
+            "}"
+        ]
+    },
+    "useState": {
+        "prefix": "s",
+        "body": [
+            "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2)"
+        ]
+    },
+    "useEffect": {
+        "prefix": "e",
+        "body": [
+            "   useEffect(() => {",
+            "       ",
+            "       return () => {",
+            "           ",
+            "       }",
+            "   }, [])"
+        ]
+    },
+    "useRef": {
+        "prefix": "r",
+        "body": [
+            "const $1 = useRef($2)"
+        ]
+    },
+    "useId": {
+        "prefix": "i",
+        "body": [
+            "const $1 = useId($2)"
+        ]
+    },
+    "customHook": {
+        "prefix": "ch",
+        "body": [
+            "export const ${TM_FILENAME_BASE} = () => {",
+            "   ",
+            "}"
+        ]
+    },
+    "customHook-useState": {
+        "prefix": "chs",
+        "body": [
+            "import { useState } from 'react'",
+            "export const ${TM_FILENAME_BASE} = () => {",
+            "   const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2)",
+            "   return {$1}",
+            "}"
+        ]
+    },
+    "customHook-useState-useEffect": {
+        "prefix": "chse",
+        "body": [
+            "import { useEffect, useState } from 'react'",
+            "export const ${TM_FILENAME_BASE} = () => {",
+            "   const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2)",
+            "   ",
+            "   useEffect(() => {",
+            "       ",
+            "       return () => {",
+            "           ",
+            "       }",
+            "   }, [])",
+            "   ",
+            "   return {$1}",
+            "}"
+        ]
+    }
+}
